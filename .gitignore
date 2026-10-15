@@ -1,6 +1,0 @@
-# Git Ignore for VidLoop Pro GitHub Repository
-Thumbs.db
-Desktop.ini
-.DS_Store
-*.tmp
-*.log
