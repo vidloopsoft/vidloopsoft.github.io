@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VidLoop Pro Studio - Video & Audio Infinite Looper & Merger Desktop App</title>
+  <meta name="description" content="Software desktop C++ profesional untuk looping video dan audio hingga 24 jam nonstop super cepat serta penggabung video instan dengan tampilan studio CapCut & Adobe Premiere Pro.">
+  <meta name="keywords" content="video looper, audio looper, video merger, looping 24 jam, ffmpeg c++, vidloop pro, zainu el maarif">
+  <meta name="author" content="Zainu El Maarif">
+
+  <!-- OpenGraph / Social Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VidLoop Pro Studio - Infinite Video Looper & Merger">
+  <meta property="og:description" content="Loop video/audio hingga 24 jam super cepat dengan tampilan studio profesional. Coba gratis 24 jam!">
+  <meta property="og:image" content="assets/banner.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/app.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span class="top-tag" data-i18n="topTag">GRATIS 24 JAM</span>
+    <span data-i18n="topPromo">🎉 UJI COBA GRATIS 24 JAM PERTAMA: Akses penuh semua fitur studio tanpa kartu kredit & tanpa watermark!</span>
+    <a href="#download" data-i18n="topLink">Download Sekarang &rarr;</a>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <img src="assets/app.ico" alt="VidLoop Pro Icon" class="brand-icon">
+        <span class="brand-text">VidLoop <span style="font-weight:400; color:#fff;">Pro</span></span>
+        <span class="brand-badge">STUDIO v1.0</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#trial" class="nav-link" style="color:var(--accent-cyan); font-weight:700;" data-i18n="navTrial">🎁 Uji Coba Gratis</a></li>
+        <li><a href="#features" class="nav-link" data-i18n="navFeatures">Fitur Utama</a></li>
+        <li><a href="#preview" class="nav-link" data-i18n="navPreview">Tampilan Studio</a></li>
+        <li><a href="#benchmark" class="nav-link" data-i18n="navBenchmark">Kecepatan</a></li>
+        <li><a href="#pricing" class="nav-link" data-i18n="navPricing">Harga & Lisensi</a></li>
+        <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="btn-lang" title="Ganti Bahasa / Switch Language">🌐 ID / EN</button>
+        <a href="#download" class="btn btn-primary btn-sm" data-i18n="navBtnDownload">Download Gratis</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="pill-badge" style="border-color: rgba(0, 240, 255, 0.5); background: rgba(0, 240, 255, 0.12);">
+        <span class="pill-dot"></span>
+        <span data-i18n="heroPill">🔥 GRATIS 24 JAM UJI COBA • Windows 7, 8, 10, 11 (64-bit)</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-i18n="heroTitlePrefix">Looping Video & Audio Hingga</span><br>
+        <span class="text-gradient" data-i18n="heroTitleAccent">24 Jam Nonstop</span> <span data-i18n="heroTitleSuffix">Super Cepat</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="heroSubtitle">
+        Software desktop bertenaga C++ & hardware acceleration untuk membuat looping video tanpa batas serta penggabung video instan dengan tampilan studio profesional ala CapCut & Adobe Premiere Pro.
+      </p>
+
+      <div class="hero-cta" id="download">
+        <a href="Setup_VidLoopPro.exe" download="Setup_VidLoopPro.exe" class="btn btn-primary btn-lg download-btn" style="box-shadow: 0 4px 25px rgba(0, 240, 255, 0.55);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <div>
+            <div style="font-size:1.05rem;" data-i18n="btnDownload">Download Setup_VidLoopPro.exe</div>
+            <div style="font-size:0.75rem; opacity:0.85; font-weight:500;" data-i18n="btnDownloadSub">🎁 Uji Coba Gratis 24 Jam Pertama Langsung Aktif</div>
+          </div>
+        </a>
+
+        <a href="#pricing" class="btn btn-secondary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          <span data-i18n="btnBuy">Beli Lisensi Seumur Hidup</span>
+        </a>
+      </div>
+
+      <div class="file-info">
+        <span data-i18n="infoSafe">🛡️ 100% Bebas Malware</span>
+        <span data-i18n="infoSize">⚡ File Setup Tunggal: ~27.7 MB</span>
+        <span data-i18n="infoControlPanel">⚙️ Terdaftar di Windows Control Panel</span>
+        <span style="color:var(--accent-cyan); font-weight:700;" data-i18n="infoTrial">🎁 24 Jam Free Trial Tanpa Syarat</span>
+      </div>
+
+      <!-- Free Trial Spotlight Box -->
+      <div class="trial-spotlight" id="trial">
+        <div class="trial-content">
+          <h4>
+            <span>🎁</span>
+            <span data-i18n="trialBoxTitle">Uji Coba Gratis 24 Jam Penuh Langsung Aktif!</span>
+          </h4>
+          <p data-i18n="trialBoxDesc">
+            Setelah Anda menginstal VidLoop Pro, masa percobaan 24 jam gratis langsung berjalan otomatis. Anda bebas memakai fitur Looping 24 Jam, Video Merger, dan Render GPU 4K tanpa watermark sama sekali!
+          </p>
+        </div>
+        <div>
+          <div class="trial-badge-glow" data-i18n="trialBadgeGlow">GRATIS 24 JAM AKTIF OTOMATIS</div>
+        </div>
+      </div>
+
+      <!-- App Showcase Preview Window -->
+      <div class="showcase-wrapper" id="preview">
+        <div class="glow-underlay"></div>
+        <div class="showcase-window">
+          <div class="window-header">
+            <div class="window-controls">
+              <span class="win-dot red"></span>
+              <span class="win-dot yellow"></span>
+              <span class="win-dot green"></span>
+            </div>
+            <div class="window-title font-mono" data-i18n="windowTitle">
+              VidLoop Pro Studio v1.0 - [Timeline Monitor & Hardware Acceleration Engine]
+            </div>
+            <div style="font-size:0.75rem; color:#10b981; font-weight:600;" data-i18n="windowStatus">ACTIVE TRIAL</div>
+          </div>
+          <div class="window-body">
+            <img src="assets/preview_ui.png" alt="VidLoop Pro Studio Interface Screenshot" class="showcase-image" onerror="this.src='assets/banner.png'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="stats-strip">
+        <div class="stat-card">
+          <div class="stat-number" data-i18n="stat1Val">24 Jam</div>
+          <div class="stat-label" data-i18n="stat1Label">Durasi Looping Maksimal</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-i18n="stat2Val">100x Lebih Cepat</div>
+          <div class="stat-label" data-i18n="stat2Label">Percepatan Rendering Lossless</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-i18n="stat3Val">24 Jam Free</div>
+          <div class="stat-label" data-i18n="stat3Label">Masa Percobaan Gratis Otomatis</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-i18n="stat4Val">Rp 100K / $7</div>
+          <div class="stat-label" data-i18n="stat4Label">Lisensi Permanen Seumur Hidup</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="container" id="features">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="featTag">FITUR UNGGULAN STUDIO</span>
+      <h2 class="section-title" data-i18n="featTitle">Semua yang Anda Butuhkan untuk Looping & Merger Tanpa Ribet</h2>
+      <p class="section-subtitle" data-i18n="featSubtitle">Dirancang untuk kreator konten, editor video, musisi, streamer live 24/7, dan periklanan digital.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon-box">🔁</div>
+        <h3 class="feature-title" data-i18n="feat1Title">Looping Hingga 24 Jam</h3>
+        <p class="feature-desc" data-i18n="feat1Desc">Tentukan durasi looping sesuai kebutuhan dari 1 menit hingga 24 jam nonstop dengan kalkulasi otomatis dan input menit manual yang fleksibel.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon-box">⚡</div>
+        <h3 class="feature-title" data-i18n="feat2Title">Lossless Stream Copy Super Cepat</h3>
+        <p class="feature-desc" data-i18n="feat2Desc">Teknologi stream-loop menyalin stream tanpa rendering ulang berjam-jam. Video 10 jam selesai diekspor hanya dalam hitungan detik tanpa menurunkan kualitas gambar!</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon-box">🎬</div>
+        <h3 class="feature-title" data-i18n="feat3Title">Penggabung Video (Merger)</h3>
+        <p class="feature-desc" data-i18n="feat3Desc">Gabungkan puluhan klip video menjadi satu file utuh dengan transisi mulus dan urutan klip yang dapat Anda atur secara bebas.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="feature-icon-box">🚀</div>
+        <h3 class="feature-title" data-i18n="feat4Title">Hardware Acceleration</h3>
+        <p class="feature-desc" data-i18n="feat4Desc">Mendukung akselerasi GPU NVIDIA NVENC, AMD AMF, dan Intel QuickSync untuk ekspor beresolusi tinggi mulai dari 480p, 720p, 1080p, 2K, hingga 4K.</p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="feature-card">
+        <div class="feature-icon-box">🎛️</div>
+        <h3 class="feature-title" data-i18n="feat5Title">Preview Monitor 16:9 & Timeline</h3>
+        <p class="feature-desc" data-i18n="feat5Desc">Monitor Cinema resolusi tinggi dengan ekstraksi thumbnail frame asli serta visualisasi timeline multi-track V1/A1 ala software NLE profesional.</p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="feature-card">
+        <div class="feature-icon-box">🛡️</div>
+        <h3 class="feature-title" data-i18n="feat6Title">Terdaftar Resmi di Control Panel</h3>
+        <p class="feature-desc" data-i18n="feat6Desc">Aplikasi terintegrasi resmi di Windows Control Panel (Programs and Features) lengkap dengan uninstaller yang bersih, aman dari deteksi antivirus, dan tanpa file residu.</p>
+      </div>
+    </div>
+
+    <!-- Speed Benchmark Box -->
+    <div class="benchmark-box" id="benchmark">
+      <div class="benchmark-grid">
+        <div>
+          <span class="section-tag" data-i18n="benchTag">PERFORMA EKSPOR</span>
+          <h3 class="font-heading" style="font-size:1.8rem; margin-bottom:12px;" data-i18n="benchTitle">Kecepatan Ekspor Ekstrem</h3>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:20px;" data-i18n="benchDesc">
+            Editor video konvensional memerlukan waktu hingga beberapa jam untuk me-render video looping 10 jam. VidLoop Pro menggunakan direct stream repetition sehingga proses selesai seketika tanpa beban CPU berat!
+          </p>
+          <div style="display:flex; gap:16px;">
+            <div style="background:rgba(0,240,255,0.1); padding:10px 16px; border-radius:10px; border:1px solid rgba(0,240,255,0.25);">
+              <span style="font-size:1.3rem; font-weight:800; color:var(--accent-cyan);">98%</span>
+              <p style="font-size:0.75rem; color:var(--text-dim);" data-i18n="benchSave">Hemat Waktu</p>
+            </div>
+            <div style="background:rgba(16,185,129,0.1); padding:10px 16px; border-radius:10px; border:1px solid rgba(16,185,129,0.25);">
+              <span style="font-size:1.3rem; font-weight:800; color:var(--accent-green);">100%</span>
+              <p style="font-size:0.75rem; color:var(--text-dim);" data-i18n="benchQuality">Kualitas Asli (Lossless)</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="bar-group">
+            <div class="bar-label-wrap">
+              <span style="font-weight:600; color:var(--accent-cyan);" data-i18n="benchFastLabel">⚡ VidLoop Pro (Lossless Stream Copy)</span>
+              <span class="font-mono" style="color:var(--accent-green); font-weight:700;" data-i18n="benchFastTime">12 Detik</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill fast"></div>
+            </div>
+          </div>
+
+          <div class="bar-group">
+            <div class="bar-label-wrap">
+              <span style="color:var(--text-muted);" data-i18n="benchSlowLabel">Editor Konvensional (CPU Full Re-render)</span>
+              <span class="font-mono" style="color:#ef4444;" data-i18n="benchSlowTime">1 Jam 45 Menit</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill slow"></div>
+            </div>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-dim); text-align:right;" data-i18n="benchNote">*Pengujian klip 1080p target durasi looping 10 jam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="priceTag">PAKET LISENSI PERMANEN</span>
+        <h2 class="section-title" data-i18n="priceSectionTitle">Investasi Sekali, Nikmati Selamanya</h2>
+        <p class="section-subtitle" data-i18n="priceSectionSubtitle">Sekali bayar untuk penggunaan selamanya, termasuk update dan dukungan penuh.</p>
+      </div>
+
+      <div class="pricing-card-wrapper">
+        <div class="pricing-card">
+          <div class="popular-badge" data-i18n="pricePopular">Paling Populer & Hemat</div>
+          <div class="pricing-header">
+            <h3 class="pricing-title" data-i18n="pricePlanTitle">Lisensi Lifetime (1 Komputer)</h3>
+            <div class="pricing-amount" id="priceAmount">
+              Rp 100.000<span class="pricing-period" data-i18n="pricePeriod"> / seumur hidup</span>
+            </div>
+
+            <div class="pricing-currency-switch">
+              <button id="currencyIdr" class="btn btn-primary btn-sm">IDR (Rp)</button>
+              <button id="currencyUsd" class="btn btn-secondary btn-sm">USD ($)</button>
+            </div>
+          </div>
+
+          <div style="background:rgba(0, 240, 255, 0.12); border:1px solid rgba(0, 240, 255, 0.4); border-radius:14px; padding:14px 18px; margin: 18px 0; text-align:center;">
+            <div style="font-weight:800; color:var(--accent-cyan); font-size:1.02rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+              <span>🎁</span>
+              <span data-i18n="priceTrialBadge">100% GRATIS UJI COBA 24 JAM PERTAMA!</span>
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px; line-height:1.5;" data-i18n="priceTrialDesc">
+              Tidak perlu langsung bayar! Pasang aplikasinya sekarang dan nikmati seluruh fitur pro selama 24 jam penuh tanpa watermark. Baru beli lisensi jika Anda puas!
+            </p>
+          </div>
+
+          <ul class="pricing-features-list">
+            <li class="pricing-feature-item">
+              <span class="check-icon">✓</span>
+              <span data-i18n="featItem1">Akses penuh seluruh fitur Video & Audio Looper tanpa batas</span>
+            </li>
+            <li class="pricing-feature-item">
+              <span class="check-icon">✓</span>
+              <span data-i18n="featItem2">Fitur Video Merger (penggabung banyak file tanpa limit)</span>
+            </li>
+            <li class="pricing-feature-item">
+              <span class="check-icon">✓</span>
+              <span data-i18n="featItem3">Dukungan ekspor resolusi tinggi hingga 4K Ultra HD</span>
+            </li>
+            <li class="pricing-feature-item">
+              <span class="check-icon">✓</span>
+              <span data-i18n="featItem4">Akselerasi hardware penuh (NVENC, AMF, Intel QSV)</span>
+            </li>
+            <li class="pricing-feature-item">
+              <span class="check-icon">✓</span>
+              <span data-i18n="featItem5">Lisensi terkunci aman per komputer (Hardware Machine ID)</span>
+            </li>
+            <li class="pricing-feature-item">
+              <span class="check-icon">✓</span>
+              <span data-i18n="featItem6">Bebas watermark & bebas biaya langganan bulanan</span>
+            </li>
+          </ul>
+
+          <div style="text-align:center; margin-bottom:16px;">
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;" data-i18n="contactHeading">Hubungi pengembang untuk aktivasi instan:</p>
+          </div>
+
+          <!-- Contact / Order Buttons -->
+          <div class="contact-grid">
+            <a href="https://wa.me/6285641184229?text=Halo%20Mas%20Zainu%20El%20Maarif,%20saya%20mau%20beli%20lisensi%20VidLoop%20Pro" target="_blank" class="contact-btn wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>WhatsApp: +6285641184229</span>
+            </a>
+
+            <button onclick="copyText('085641184229', 'DANA (0856-4118-4229 a.n. Zainu El Maarif)')" class="contact-btn dana">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+              <span>DANA: 085641184229</span>
+            </button>
+
+            <button onclick="copyText('085641184229', 'GoPay (0856-4118-4229 a.n. Zainu El Maarif)')" class="contact-btn gopay">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              <span>GoPay: 085641184229</span>
+            </button>
+
+            <button onclick="copyText('085641184229', 'ShopeePay (0856-4118-4229 a.n. Zainu El Maarif)')" class="contact-btn shopee">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              <span>ShopeePay: 085641184229</span>
+            </button>
+
+            <button onclick="copyText('zainuelflash9@gmail.com', 'PayPal ($7 USD - zainuelflash9@gmail.com)')" class="contact-btn paypal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <span>PayPal: zainuelflash9@gmail.com</span>
+            </button>
+
+            <a href="https://t.me/Zainuelmaarif" target="_blank" class="contact-btn tg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span>Telegram: @Zainuelmaarif</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activation Steps -->
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4 class="step-title" data-i18n="step1Title">Instal Aplikasi</h4>
+          <p class="step-desc" data-i18n="step1Desc">Download dan jalankan Setup_VidLoopPro.exe. Aplikasi langsung aktif 24 jam percobaan gratis.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4 class="step-title" data-i18n="step2Title">Salin Machine ID</h4>
+          <p class="step-desc" data-i18n="step2Desc">Klik tombol "Aktivasi Lisensi" di dalam aplikasi untuk menyalin kode Machine ID unik komputer Anda.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4 class="step-title" data-i18n="step3Title">Terima Kunci Permanen</h4>
+          <p class="step-desc" data-i18n="step3Desc">Kirimkan Machine ID ke WhatsApp/Telegram. Pengembang akan langsung mengirimkan Kunci Lisensi Lifetime Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container" id="faq">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="faqTag">INFORMASI & BANTUAN</span>
+      <h2 class="section-title" data-i18n="faqTitle">Pertanyaan yang Sering Diajukan</h2>
+      <p class="section-subtitle" data-i18n="faqSubtitle">Semua hal yang perlu Anda ketahui tentang instalasi dan lisensi VidLoop Pro.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item active">
+        <div class="faq-question">
+          <span data-i18n="faqQ1">Apakah file installer ini aman dan ramah antivirus?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer" data-i18n="faqA1">
+          Ya, 100% aman! VidLoop Pro dikompilasi murni dengan arsitektur C++ dan engine FFmpeg resmi. Tidak mengandung adware, malware, atau inject code. Installer juga memiliki uninstaller resmi yang terdaftar di Windows Control Panel sehingga Anda dapat mencopotnya kapan saja dengan bersih.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span data-i18n="faqQ2">Bagaimana cara kerja masa percobaan gratis 24 jam?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer" data-i18n="faqA2">
+          Begitu Anda pertama kali membuka VidLoop Pro setelah instalasi, sistem otomatis mencatat tanggal pemasangan dan memberikan akses penuh tanpa batas selama 24 jam pertama. Anda bisa menguji seluruh fitur looping dan merger sebelum memutuskan untuk membeli lisensi seumur hidup.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span data-i18n="faqQ3">Berapa lama waktu yang dibutuhkan untuk membuat video 24 jam?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer" data-i18n="faqA3">
+          Dengan fitur "Lossless Stream Copy", pembuatan file looping video 10 hingga 24 jam biasanya hanya membutuhkan waktu 10 hingga 30 detik saja (tergantung kecepatan baca/tulis harddisk atau SSD Anda), karena tidak memerlukan render ulang frame per frame yang melelahkan.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span data-i18n="faqQ4">Sistem operasi apa saja yang didukung?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer" data-i18n="faqA4">
+          Mendukung semua versi Windows 64-bit: Windows 7 SP1, Windows 8, Windows 8.1, Windows 10, dan Windows 11.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span data-i18n="faqQ5">Metode pembayaran apa saja yang diterima?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer" data-i18n="faqA5">
+          Untuk pengguna Indonesia dapat menggunakan Transfer Bank / QRIS via konfirmasi WhatsApp (+6285641184229). Untuk pembeli internasional dapat menggunakan PayPal ke akun zainuelflash9@gmail.com sebesar $7 USD.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="assets/app.ico" alt="VidLoop Pro Icon" class="brand-icon">
+            <span class="brand-text">VidLoop <span style="font-weight:400; color:#fff;">Pro</span></span>
+          </div>
+          <p data-i18n="footerDesc">
+            Software Video & Audio Looper and Merger Studio kelas profesional bertenaga teknologi C++ modern.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:14px; font-size:1.05rem;" data-i18n="footerDevTitle">Kontak Resmi Pengembang</h4>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:6px;">
+            <strong data-i18n="footerDev">Developer: Zainu El Maarif</strong>
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:6px;">
+            <strong>WhatsApp:</strong> <a href="https://wa.me/6285641184229" style="color:var(--accent-cyan); text-decoration:none;">+6285641184229</a>
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:6px;">
+            <strong>Telegram:</strong> <a href="https://t.me/Zainuelmaarif" style="color:var(--accent-cyan); text-decoration:none;">@Zainuelmaarif</a>
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-muted);">
+            <strong>Email:</strong> <a href="mailto:zainuelmaarif@gmail.com" style="color:var(--accent-cyan); text-decoration:none;">zainuelmaarif@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footerCopy">&copy; 2026 VidLoop Pro Studio by Zainu El Maarif. All Rights Reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="#features" style="color:var(--text-dim); text-decoration:none;" data-i18n="footerLinkFeat">Fitur</a>
+          <a href="#pricing" style="color:var(--text-dim); text-decoration:none;" data-i18n="footerLinkPrice">Harga</a>
+          <a href="https://github.com/vidloopsoft/app" target="_blank" style="color:var(--text-dim); text-decoration:none;">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMsg">Tersalin ke clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
